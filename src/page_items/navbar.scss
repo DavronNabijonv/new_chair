@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap");
+
+// desktop
+.navbar {
+  width: auto;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(238, 2, 255);
+  margin: 0 10px;
+  margin-top: 5px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vw;
+    width: 1200px;
+  }
+}
+
+.logo {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Bitter", sans;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  p {
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 8px;
+    font-family: "Bitter", sans;
+    font-weight: 600;
+    margin-top: 5px;
+    width: calc(auto + 8px);
+    hr {
+      width: 0;
+      height: 3px;
+      background-color: white;
+      border: none;
+      transition: 0.5s;
+      margin-top: 5px;
+    }
+  }
+  p:hover {
+    cursor: pointer;
+    hr {
+      width: calc(100% + 8px);
+    }
+  }
+}
+
+.language_login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  button {
+    border: none;
+    background-color: rgb(0, 99, 170);
+    font-size: 20px;
+    color: white;
+    padding: 7px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    transition: 0.2s;
+    text-align: center;
+    border: 3.5px solid rgb(0, 99, 170);
+  }
+  button:hover {
+    background: none;
+    cursor: pointer;
+  }
+}
+
+@keyframes pop_down {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes pop_up {
+  from {
+    left: -15px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    left: 10px;
+  }
+}
+
+//buqismscrol bo`lganda ko`rinuvchinavbar qismini
+// calssi
+.hover {
+  animation: pop_up 1s forwards;
+}
+
+.display {
+  animation: pop_down 1s forwards;
+  opacity: 0;
+}
+
+// scroll bo`lgandagi animasiyalar edi
+
+// desktop
+
+// ------------ chegara -------------------
+
+// mobile
+
+.mobile {
+  background-color: rgb(238, 2, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 15px;
+  .btn_grp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .mobile_toggle_btn{
+      border: none;
+      background: rgba(0, 0, 0, 0.338);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      font-size: 25px;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px;
+      display: flex;
+      color: white;
+      align-items: center;
+      justify-content: center;
+      svg{
+        font-weight: 900;
+      }
+    }
+    .mobile_aloqa {
+      border: none;
+      background-color: rgb(0, 99, 170);
+      font-size: 20px;
+      color: white;
+      padding: 7px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      border: none;
+      transition: 0.2s;
+      text-align: center;
+      border: 3.5px solid rgb(0, 99, 170);
+    }
+    .mobile_aloqa:hover {
+      background: none;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes open_items{
+  from{
+    left: -25%;
+  }
+  to{
+    left: 25%;
+  }
+}
+
+@keyframes mobile_overlay{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.item_links{
+  animation-duration: open_items .8s forwards;
+  width: 50%;
+  height: auto;
+  position: absolute;
+  background-color: rgb(254, 254, 254);
+  box-shadow: -5px 0.5px 15px 0px #333;
+  z-index: 1000;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: transform(-50%,-50%);
+  top: 25%;
+  left: 25%;
+  p{
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 8px;
+    font-family: "Bitter", sans;
+    font-weight: 600;
+    margin-top: 5px;
+    width: calc(auto + 8px);
+    background-color: rgb(238, 2, 255);
+    border-radius: 10px;
+  }
+}
+
+.close_item{
+  animation: close_items .8s forwards;
+  display: none;
+}
+
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 100px);
+  top: -100px;
+  z-index: 999;
+  background-color: #a9a9a9c1;
+  animation: mobile_overlay .5s forwards;
+}
+.close_overlay{
+  animation: close_overlay .5s forwards;
+  display: none;
+}
+
+// mobile
+
+// -------------------- chegara --------------------
+
+// scroll
+
+.scroll {
+  position: fixed;
+  left: 20px;
+  top: 40%;
+  gap: 15px;
+  width: 50px;
+  background-color: rgb(243, 254, 255);
+  border-radius: 15px;
+  padding: 18px 15px;
+  box-shadow: 0.5px 0.5px 10px 2px gray;
+  ol {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    li {
+      svg {
+        color: rgb(238, 2, 255);
+        font-size: 23px;
+      }
+      p {
+        position: absolute;
+        opacity: 0;
+        width: 120px;
+        background-color: rgb(238, 2, 255);
+        border-radius: 8px;
+        padding: 5px;
+        left: 28px;
+        top: -8px;
+        color: white;
+        text-align: center;
+      }
+      .asosiy {
+        top: -5px;
+      }
+      .biz {
+        top: 40px;
+      }
+      .mah {
+        top: 80px;
+      }
+      .xizmat {
+        top: 120px;
+      }
+      .aloqa {
+        top: 160px;
+      }
+    }
+    li:hover {
+      p {
+        opacity: 1;
+        width: 120px;
+      }
+    }
+  }
+}
+
+// scroll
+
+
+
+
+//  bu yerdan responsive qismlar boshlanadi
+
+@media (max-width: 1200px) {
+  .navbar {
+    .nav {
+      width: 100%;
+    }
+  }
+}
+
+
+@media (max-width: 860px) {
+  .navbar{
+    padding: 5px ;
+    margin: 0 5px;
+    margin-top: 5px;
+    .nav{
+      gap: 1vw;
+      .logo{
+      }
+      .links{
+        gap: 3px;
+        p{
+          margin: 0;
+          padding: 3px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  
+}
+
+
+@media(max-width:425px){
+    .mobile{
+      padding: 10px 8px;
+      .btn_grp{
+        .mobile_toggle_btn{
+          font-size: 7vw;
+          padding: 1vw;
+        }
+        .mobile_aloqa{
+          font-size: 7vw;
+          padding: 1vw 7vw;
+        }
+      }
+    }
+    .logo{
+      font-size: 7vw;
+    }
+}
