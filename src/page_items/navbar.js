@@ -3,8 +3,9 @@ import "./navbar.scss";
 import { MdHome } from "react-icons/md";
 import { RiUser3Fill } from "react-icons/ri";
 import { HiMiniRectangleGroup, HiViewColumns } from "react-icons/hi2";
-import { MdOutlineMessage } from "react-icons/md";
+import { MdOutlineMessage,MdOutlineManageSearch,MdOutlineStorefront } from "react-icons/md";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
+import { SlHome } from "react-icons/sl";
 
 function Navbar() {
   const [innerWidth, setInnerWidth] = useState(1500);
@@ -88,7 +89,20 @@ function Mobile (){
 
          <div className={toggle?"overlay":"close_overlay"} onClick={()=>{setToggle(false)}}></div>
         
-      
+      <div className="bottom_bar">
+        <div className="bar_grp">
+          <SlHome />
+          <p>Asosiy</p>
+        </div>
+        <div className="bar_grp">
+        <MdOutlineManageSearch />
+          <p>Katalog</p>
+        </div>
+        <div className="bar_grp">
+        <MdOutlineStorefront />
+          <p>Shourum</p>
+        </div>
+      </div>
     </>
   )
 }

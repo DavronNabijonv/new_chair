@@ -1,0 +1,8 @@
+:root{
+    --main-color:#7000ff;
+    --back_color:#fff;
+    --text_color:#fff;
+    --box-sh:0.5px 0.5px 10px 2px gray;
+    --border_style:3.5px solid #7000ff;
+    --border_r:10px;
+}
