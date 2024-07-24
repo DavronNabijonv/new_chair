@@ -28,7 +28,6 @@ export default function PastkiSlider() {
     }, []);
   return (
     <>
-      <div className="asosiy">
         <Swiper
           spaceBetween={0}
           centeredSlides={false}
@@ -47,7 +46,6 @@ export default function PastkiSlider() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
     </>
   );
 }

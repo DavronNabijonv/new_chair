@@ -108,11 +108,15 @@
 // calssi
 .hover {
   animation: pop_up 1s forwards;
+  position: relative;
+  z-index: 1000;
 }
 
 .display {
   animation: pop_down 1s forwards;
   opacity: 0;
+  position: relative;
+  z-index: 1000;
 }
 
 // scroll bo`lgandagi animasiyalar edi

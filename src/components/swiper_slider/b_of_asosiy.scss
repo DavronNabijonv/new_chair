@@ -1,12 +1,15 @@
 .mySwiperPastki {
   width: 1200px;
-  margin-top: -170px;
+  margin-bottom: 70px;
+  max-height: 300px;
+  padding-top: 40px;
   .swiper-wrapper {
     display: flex;
-    gap: 15px;
+    gap: 30px;
     .swiper-slide {
       img {
         border-radius: 25px;
+        height: 100%;
       }
     }
   }
@@ -22,7 +25,6 @@
   .mySwiperPastki {
     margin-top: 0;
     margin-bottom: 80px;
-    padding-top: 30px;
     .swiper-wrapper{
         gap: 30px;
     }
