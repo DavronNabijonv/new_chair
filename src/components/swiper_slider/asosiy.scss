@@ -65,7 +65,7 @@ img {
 
 @media (max-width: 670px) {
   .mySwiper {
-    margin-top: 50px;
+    padding-top: 50px;
     .swiper-wrapper {
       display: flex;
       gap: 15px;
@@ -80,7 +80,7 @@ img {
   }
   img {
     width: 100%;
-    margin-left: -25vw;
+    margin-left: -120px;
     object-fit: initial;
     height: auto;
   }

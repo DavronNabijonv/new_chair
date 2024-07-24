@@ -264,7 +264,9 @@
   height: calc(100% + 100px);
   top: -100px;
   z-index: 999;
-  background-color: #a9a9a9c1;
+  background-color: #ffffffa4;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
   animation: mobile_overlay .5s forwards;
 }
 .close_overlay{
