@@ -8,20 +8,22 @@ import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { SlHome } from "react-icons/sl";
 
 function Navbar() {
-  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  const [innerWidthNavbar, setInnerWidthNavbar] = useState(window.innerWidth);
   const [scrollDownf, setScrollDownf] = useState(false);
 
+  const handleResize = useCallback(() => {
+    setInnerWidthNavbar(window.innerWidth);
+  },[innerWidthNavbar]);
+
+  const handleDown = useCallback(() => {
+    if (window.scrollY === 0) {
+      setScrollDownf(false);
+    } else {
+      setScrollDownf(true);
+    }
+  },[scrollDownf]);
   useEffect(() => {
-    const handleResize = () => {
-      setInnerWidth(window.innerWidth);
-    };
-    const handleDown = () => {
-      if (window.scrollY === 0) {
-        setScrollDownf(false);
-      } else {
-        setScrollDownf(true);
-      }
-    };
+    
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleDown);
 
@@ -35,7 +37,7 @@ function Navbar() {
 
   return (
     <>
-      {innerWidth > 670 ? <Desktop /> : <Mobile/>}
+      {innerWidthNavbar > 670 ? <Desktop /> : <Mobile/>}
       <div className={scrollDownf? "hover":"display"}><ScrollNav /></div>
     </>
   );

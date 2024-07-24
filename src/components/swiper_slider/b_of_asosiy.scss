@@ -1,0 +1,28 @@
+.mySwiperPastki {
+  width: 1200px;
+  .swiper-wrapper {
+    display: flex;
+    gap: 15px;
+    .swiper-slide {
+      img {
+        border-radius: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1210px) {
+  .mySwiperPastki {
+    width: 100%;
+  }
+}
+
+@media (max-width: 670px) {
+  .mySwiperPastki {
+    margin-bottom: 80px;
+    padding-top: 30px;
+    .swiper-wrapper{
+        gap: 30px;
+    }
+  }
+}

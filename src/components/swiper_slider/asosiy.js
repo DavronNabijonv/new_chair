@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -13,6 +13,21 @@ import "./asosiy.scss";
 import { images_info } from "../../db/showCase_slider";
 
 export default function AsosiySwiper() {
+
+  const [innerWidthAsosiySwiper, setInnerWidthAsosiySwiper] = useState(window.innerWidth);
+  
+  
+  const handleResize = useCallback(() => {
+    setInnerWidthAsosiySwiper(window.innerWidth);
+  },[innerWidthAsosiySwiper])
+    useEffect(() => {
+      window.addEventListener("resize", handleResize);
+  
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+
   return (
     <>
       <div className="asosiy">
@@ -26,7 +41,7 @@ export default function AsosiySwiper() {
             disableOnInteraction: false,
           }}
           navigation={true}
-          slidesPerView={1.25}
+          slidesPerView={innerWidthAsosiySwiper>670?1:1.25}
           modules={[Pagination, Navigation, Autoplay]}
           className="mySwiper"
         >

@@ -290,6 +290,7 @@
   border-radius: 15px;
   padding: 18px 15px;
   box-shadow: var(--box-sh);
+  z-index: 1000;
   ol {
     list-style-type: none;
     display: flex;
