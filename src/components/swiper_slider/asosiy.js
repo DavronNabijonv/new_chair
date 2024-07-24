@@ -18,7 +18,7 @@ export default function AsosiySwiper() {
       <div className="asosiy">
         <Swiper
           spaceBetween={0}
-          centeredSlides={false}
+          centeredSlides={true}
           pagination={true}
           loop={true}
           autoplay={{
@@ -26,7 +26,7 @@ export default function AsosiySwiper() {
             disableOnInteraction: false,
           }}
           navigation={true}
-          slidesPerView={1}
+          slidesPerView={1.25}
           modules={[Pagination, Navigation, Autoplay]}
           className="mySwiper"
         >
