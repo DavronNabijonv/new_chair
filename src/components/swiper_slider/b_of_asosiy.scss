@@ -1,5 +1,6 @@
 .mySwiperPastki {
   width: 1200px;
+  margin-top: -170px;
   .swiper-wrapper {
     display: flex;
     gap: 15px;
@@ -19,6 +20,7 @@
 
 @media (max-width: 670px) {
   .mySwiperPastki {
+    margin-top: 0;
     margin-bottom: 80px;
     padding-top: 30px;
     .swiper-wrapper{
