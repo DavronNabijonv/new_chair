@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./product.css";
 import { products_slider } from "../../db/showCase_slider";
@@ -24,13 +24,11 @@ export default function Product() {
       {products_slider.map((productGroup, index) => (
         <div
           key={index}
-          style={{ width: "1200px" }}
-          className={`group${index} groupOfProducts ${index === selectedGroupIndex ? 'selected' : 'hide'}`}
+          className={`groupOfProducts ${index === selectedGroupIndex ? 'selected' : 'hide'}`}
         >
-          <h1>{index}</h1>
           {productGroup.map((product) => (
             <div className="cards" key={product.name}>
-              <img src={product.img_url} alt="stul rasmlari" />
+              <img src={product.img_url} className="products_img" alt="stul rasmlari" />
               <div className="infoPart">
                 <p className="name"> Mahsulot: {product.name}</p>
                 <mark className="narxi">Narxi: {product.narxi}</mark>
@@ -42,7 +40,10 @@ export default function Product() {
       ))}
       <div className="productGroup">
         {groupNumbers.map((number) => (
-          <p className={`groupNumber${number} slider_pagination ${number - 1 === selectedGroupIndex ? 'active' : ''}`}
+          <p 
+          className=
+            {`slider_pagination 
+                  ${number - 1 === selectedGroupIndex ? 'active' : ''}`}
             onClick={()=>{slider(number-1)}}
             key={number} >
             {number}

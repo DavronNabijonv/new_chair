@@ -47,7 +47,7 @@ export default function AsosiySwiper() {
         >
           {images_info.map((r) => (
             <SwiperSlide key={r.img_url}>
-              <img src={`${r.img_url}`} alt="Slide Image" />
+              <img src={`${r.img_url}`} className="asosiy_slider_img" alt="Slide Image" />
             </SwiperSlide>
           ))}
         </Swiper>

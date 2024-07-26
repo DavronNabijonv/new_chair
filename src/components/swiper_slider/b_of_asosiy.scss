@@ -7,9 +7,13 @@
     display: flex;
     gap: 30px;
     .swiper-slide {
-      img {
+      .b_of_asosiy_img {
         border-radius: 25px;
         height: 100%;
+        width: 100%;
+        margin: 5px auto;
+        object-fit: contain;
+        border-radius: 15px;
       }
     }
   }
@@ -25,8 +29,8 @@
   .mySwiperPastki {
     margin-top: 0;
     margin-bottom: 80px;
-    .swiper-wrapper{
-        gap: 30px;
+    .swiper-wrapper {
+      gap: 30px;
     }
   }
 }
