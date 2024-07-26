@@ -5,6 +5,11 @@ import { products_slider } from "../../db/showCase_slider";
 
 export default function Product() {
   const [groupNumbers, setGroupNumbers] = useState([]);
+  const [selectedGroupIndex, setSelectedGroupIndex] = useState(0);
+
+  const slider = (groupIndex) => {
+    setSelectedGroupIndex(groupIndex);
+  };
 
   useEffect(() => {
     const numbers = Array.from(
@@ -20,8 +25,9 @@ export default function Product() {
         <div
           key={index}
           style={{ width: "1200px" }}
-          className={`${index}group groupOfProducts`}
+          className={`group${index} groupOfProducts ${index === selectedGroupIndex ? 'selected' : 'hide'}`}
         >
+          <h1>{index}</h1>
           {productGroup.map((product) => (
             <div className="cards" key={product.name}>
               <img src={product.img_url} alt="stul rasmlari" />
@@ -36,7 +42,9 @@ export default function Product() {
       ))}
       <div className="productGroup">
         {groupNumbers.map((number) => (
-          <p className="groupNumber" key={number} >
+          <p className={`groupNumber${number} slider_pagination ${number - 1 === selectedGroupIndex ? 'active' : ''}`}
+            onClick={()=>{slider(number-1)}}
+            key={number} >
             {number}
           </p>
         ))}

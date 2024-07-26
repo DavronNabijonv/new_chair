@@ -8,6 +8,26 @@
     gap: 15px;
 }
 
+.hide{
+    display: none;
+}
+
+.selected{
+    visibility: visible;
+}
+
+.slider_pagination{
+    
+}
+
+.active{
+
+}
+
+.hide_for_slider_pagination{
+
+}
+
 .cards{
     width: 250px;
 }
