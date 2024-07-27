@@ -63,14 +63,54 @@
 
 .cards{
     width: 250px;
+    border-radius: var(--border_r);
+    position: relative;
+    overflow: hidden;
+    border: 1.5px solid #cacacac7;
 }
 
 .cards .products_img{
     width: 100%;
     height: auto;
     object-fit: contain;
+    border-radius: var(--border_r);
+    transition: transform 0.3s ease;
 }
 
+.cards .infoPart{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 8px 5px;
+}
+
+.cards .infoPart mark{
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+.cards .infoPart .buyurtma_btn{
+    color: #fff;
+    background-color: var(--main-color);
+    border: none;
+    font-size: 18px;
+    padding: 8px 15px ;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.cards:hover{
+    background-color: #fff;
+    box-shadow: var(--box-sh);
+    border: none;
+}
+
+.cards:hover .products_img{
+    transform: scale(1.1);
+}
+
+
+/*  responsive part */
 @media(max-width:1210px){
     .groupOfProducts{
         width: 100%;
@@ -81,10 +121,11 @@
     .groupOfProducts{
         width: 100%;
         justify-content: center;
-        gap: 5px;
+        gap: 20px;
     }
     .cards{
         width: 200px;
+        
     }
 
     .cards .products_img{

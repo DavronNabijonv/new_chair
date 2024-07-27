@@ -32,7 +32,7 @@ export default function Product() {
               <div className="infoPart">
                 <p className="name"> Mahsulot: {product.name}</p>
                 <mark className="narxi">Narxi: {product.narxi}</mark>
-                <button>Buyurtma berish</button>
+                <button className="buyurtma_btn">Buyurtma berish</button>
               </div>
             </div>
           ))}
