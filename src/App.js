@@ -1,7 +1,7 @@
-import AsosiySwiper from "./components/swiper_slider/asosiy";
-import PastkiSlider from "./components/swiper_slider/b_of_asosiy";
-import Product from "./components/swiper_slider/product";
-import Navbar from "./page_items/navbar";
+import AsosiySwiper from "./mainPartsOfPage/swiper_slider/asosiy";
+import PastkiSlider from "./mainPartsOfPage/swiper_slider/b_of_asosiy";
+import Product from "./mainPartsOfPage/swiper_slider/product";
+import Navbar from "./pages/page_items/navbar";
 
 function App() {
   return (
