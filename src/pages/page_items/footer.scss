@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap");
+@import url(../../styles/style.css);
+
+.footer{
+    background-color: var(--main-color);
+    font-family: 'Bitter';
+    .f_container{
+        width: 1200px;
+        margin: 0 auto;
+        padding: 30px 20px;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+    }
+}
+
+.f_logoPart{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    h2{
+        color: #fff;
+        font-size: 30px;
+    }
+    .f_txt{
+        color: #fff;
+        font-size: 18px;
+    }
+    .f_contact{
+        display: flex;
+        gap: 10px;
+        .f_btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 8px;
+            font-size: 20px;
+            border-radius: var(--border_r);
+            border: none;
+            background-color: #fff;
+        }
+    }
+}
+
+.f_pageLinks{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 400px;
+    padding-left: 20px;
+    gap: 20px;
+    .f_links_page{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .f_links{
+            color: #fff;
+            text-decoration: underline;
+        }
+        .f_links:hover{
+            color: #da97f7;
+        }
+    }
+    .f_links_hamkorlar{
+        h3{
+            color: #e08bf8;
+            margin-bottom: 10px;
+        }
+        .dastur{
+            margin-top: 15px;
+        }
+        a{
+            color: #fff;
+        }
+        a:hover{
+            color: rgb(0, 194, 253);
+        }
+    }
+}
+
+@media(max-width:1210px){
+    .footer{
+        .f_container{
+            width: 100%;
+        }
+    }
+    .f_pageLinks{
+        padding-left: 0;
+    }
+}
+
+@media(max-width:690px){
+
+    .footer{
+        .f_container{
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+
+}
+
+@media(max-width:670px){
+
+    .footer{
+        margin-bottom: 70px;
+    }
+
+}
+
+
+
+@media(max-width:320px){
+    .f_pageLinks{
+        flex-wrap: wrap;
+    }
+}

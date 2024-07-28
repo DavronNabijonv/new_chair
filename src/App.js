@@ -7,6 +7,7 @@ import Navbar from "./pages/page_items/navbar";
 import Xizmat from "./pages/page_items/xizmat";
 import Tarmoq from "./pages/page_items/tarmoq";
 import Aloqa from "./pages/page_items/aloqa";
+import Footer from "./pages/page_items/footer";
 
 export const InnerWidthContext = React.createContext();
 
@@ -34,6 +35,7 @@ function App() {
         <About />
         <Tarmoq/>
         <Aloqa/>
+        <Footer/> 
       </InnerWidthContext.Provider>
     </div>
   );
