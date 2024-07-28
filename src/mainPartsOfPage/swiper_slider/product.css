@@ -50,7 +50,8 @@
     box-shadow:  var(--box-sh);
     cursor: pointer;
     border-radius: 8px;
-    margin: 50px 0 ;
+    margin: 20px 0 ;
+    margin-bottom: 150px;
 }
 
 .active{
@@ -62,7 +63,7 @@
 /* slider buttons group */
 
 .cards{
-    width: 250px;
+    width: 320px;
     border-radius: var(--border_r);
     position: relative;
     overflow: hidden;
@@ -73,18 +74,26 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-radius: var(--border_r);
     transition: transform 0.3s ease;
 }
 
 .cards .infoPart{
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
+    justify-content: space-between;
     padding: 8px 5px;
+    padding-top: 15px;
 }
 
-.cards .infoPart mark{
+.cards .infoPart .txt_grp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.cards .infoPart .txt_grp mark{
     padding: 2px 8px;
     border-radius: 5px;
 }
@@ -94,7 +103,7 @@
     background-color: var(--main-color);
     border: none;
     font-size: 18px;
-    padding: 8px 15px ;
+    padding: 8px 10px ;
     border-radius: 5px;
     font-weight: 600;
 }
@@ -123,12 +132,38 @@
         justify-content: center;
         gap: 20px;
     }
-    .cards{
-        width: 200px;
-        
-    }
-
     .cards .products_img{
         object-fit: cover;
+    }
+}
+
+@media(max-width:330px){
+    .groupOfProducts{
+        gap: 6.5vw;
+    }
+    .cards{
+        width: 92vw;
+        border-width: 0.5vw;
+    }
+    .cards .infoPart{
+        gap:0.5vw;
+        padding: 5vw 1.5vw;
+        padding-top: 7vw;
+    }
+    .cards .infoPart .txt_grp {
+        gap: 2.5vw;
+    }
+    .cards .infoPart .txt_grp mark{
+        padding: 0.5vw 2vw;
+        border-radius: 1.5vw;
+        font-size: 4.5vw;
+    }
+    .cards .infoPart .txt_grp .name{
+        font-size: 4.5vw;
+    }
+    .cards .infoPart .buyurtma_btn{
+        font-size: 5.5vw;
+        padding:3.5vw 4vw ;
+        border-radius: 3.5vw;
     }
 }

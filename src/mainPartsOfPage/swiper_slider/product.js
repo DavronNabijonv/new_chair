@@ -30,9 +30,11 @@ export default function Product() {
             <div className="cards" key={product.name}>
               <img src={product.img_url} className="products_img" alt="stul rasmlari" />
               <div className="infoPart">
-                <p className="name"> Mahsulot: {product.name}</p>
-                <mark className="narxi">Narxi: {product.narxi}</mark>
-                <button className="buyurtma_btn">Buyurtma berish</button>
+                <div className="txt_grp">
+                  <p className="name"> Mahsulot: {product.name}</p>
+                  <mark className="narxi">Narxi: {product.narxi}</mark>
+                </div>
+                  <button className="buyurtma_btn">Buyurtma berish</button>
               </div>
             </div>
           ))}
