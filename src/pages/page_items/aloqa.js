@@ -93,7 +93,7 @@ export default function Aloqa() {
           </div>
         </div>
       </div>
-      {/* <div className="a_grp2">
+      <div className="a_grp2">
       <iframe
             width="100%"
             height="450"
@@ -102,7 +102,7 @@ export default function Aloqa() {
             allowfullscreen=""
             loading="lazy"
           ></iframe>
-      </div> */}
+      </div>
     </div>
   );
 }
