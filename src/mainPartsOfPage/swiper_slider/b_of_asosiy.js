@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -11,21 +11,11 @@ import { Autoplay } from "swiper/modules";
 
 import "./b_of_asosiy.scss";
 import { images_info } from "../../db/showCase_slider";
+import { InnerWidthContext } from "../../App";
 
 export default function PastkiSlider() {
-  const [innerWidthPastkiSlider, setInnerWidthPastkiSlider] = useState(window.innerWidth);
+  const innerWidthPastkiSlider = useContext(InnerWidthContext)
   
-  
-  const handleResize = useCallback(() => {
-    setInnerWidthPastkiSlider(window.innerWidth);
-  },[innerWidthPastkiSlider])
-    useEffect(() => {
-      window.addEventListener("resize", handleResize);
-  
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }, []);
   return (
     <>
         <Swiper

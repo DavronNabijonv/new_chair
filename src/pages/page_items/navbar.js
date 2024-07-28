@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import "./navbar.scss";
 import { MdHome } from "react-icons/md";
 import { RiUser3Fill } from "react-icons/ri";
@@ -6,14 +6,12 @@ import { HiMiniRectangleGroup, HiViewColumns } from "react-icons/hi2";
 import { MdOutlineMessage,MdOutlineManageSearch,MdOutlineStorefront } from "react-icons/md";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { SlHome } from "react-icons/sl";
+import { InnerWidthContext } from "../../App";
 
 function Navbar() {
-  const [innerWidthNavbar, setInnerWidthNavbar] = useState(window.innerWidth);
+  const innerWidthNavbar = useContext(InnerWidthContext);
   const [scrollDownf, setScrollDownf] = useState(false);
 
-  const handleResize = useCallback(() => {
-    setInnerWidthNavbar(window.innerWidth);
-  },[innerWidthNavbar]);
 
   const handleDown = useCallback(() => {
     if (window.scrollY === 0) {
@@ -24,11 +22,9 @@ function Navbar() {
   },[scrollDownf]);
   useEffect(() => {
     
-    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleDown);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
       window.removeEventListener('scroll', handleDown);
     };
   }, []);
