@@ -7,6 +7,11 @@
     display: flex;
     gap: 30px;
     .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       .b_of_asosiy_img {
         border-radius: 25px;
         height: 100%;
@@ -14,6 +19,10 @@
         margin: 5px auto;
         object-fit: contain;
         border-radius: 15px;
+      }
+      .savdo{
+        font-size: 14px;
+        width: 100%;
       }
     }
   }
@@ -31,6 +40,20 @@
     margin-bottom: 80px;
     .swiper-wrapper {
       gap: 30px;
+    }
+  }
+}
+
+
+@media(max-width:375px){
+  .mySwiperPastki {
+    .swiper-wrapper {
+      gap: 15px;
+      .swiper-slide {
+        .b_of_asosiy_img {
+          border-radius: 8px;
+        }
+      }
     }
   }
 }

@@ -93,5 +93,13 @@
 @media(max-width:425px){
   .mySwiper{
     padding-top: 90px;
+    .swiper-wrapper{
+      gap: 8px;
+    }
+  }
+
+  .asosiy_slider_img{
+    height: calc(auto - 100px);
+    margin-left: -65px;
   }
 }
