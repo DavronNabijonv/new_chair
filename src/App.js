@@ -5,13 +5,12 @@ import Product from "./mainPartsOfPage/swiper_slider/product";
 import About from "./pages/page_items/about";
 import Navbar from "./pages/page_items/navbar";
 import Xizmat from "./pages/page_items/xizmat";
+import Tarmoq from "./pages/page_items/tarmoq";
 
-export const InnerWidthContext = React.createContext()
+export const InnerWidthContext = React.createContext();
 
 function App() {
-  const [innerWidth, setInnerWidth] = useState(
-    window.innerWidth
-  );
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
 
   const handleResize = useCallback(() => {
     setInnerWidth(window.innerWidth);
@@ -27,11 +26,12 @@ function App() {
     <div className="App">
       <InnerWidthContext.Provider value={innerWidth}>
         <Navbar />
-      <AsosiySwiper/>
-      <PastkiSlider/>
-      <Product/>
-      <Xizmat/>
+        <AsosiySwiper />
+        <PastkiSlider />
+        <Product />
+        <Xizmat />
         <About />
+        <Tarmoq/>
       </InnerWidthContext.Provider>
     </div>
   );
