@@ -6,7 +6,7 @@ import { BsWrenchAdjustable } from "react-icons/bs";
 import { RiContractLine,RiCustomerService2Line } from "react-icons/ri";
 
 
-export const xizmat = [
+export const xizmat_db = [
     {
         nameServices:"Interier design",
         icon: <SiAntdesign />,
