@@ -1,13 +1,9 @@
 import React, { useCallback, useEffect, useState, useContext } from "react";
-import AsosiySwiper from "./mainPartsOfPage/swiper_slider/asosiy";
-import PastkiSlider from "./mainPartsOfPage/swiper_slider/b_of_asosiy";
-import Product from "./mainPartsOfPage/swiper_slider/product";
-import About from "./pages/page_items/about";
-import Navbar from "./pages/page_items/navbar";
-import Xizmat from "./pages/page_items/xizmat";
-import Tarmoq from "./pages/page_items/tarmoq";
-import Aloqa from "./pages/page_items/aloqa";
-import Footer from "./pages/page_items/footer";
+import Navbar from "./pages/navbar_footer/navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/homePage";
+import ProductPage from "./pages/productPage";
+import Footer from "./pages/navbar_footer/footer";
 
 export const InnerWidthContext = React.createContext();
 
@@ -28,14 +24,11 @@ function App() {
     <div className="App">
       <InnerWidthContext.Provider value={innerWidth}>
         <Navbar />
-        <AsosiySwiper />
-        <PastkiSlider />
-        <Product />
-        <Xizmat />
-        <About />
-        <Tarmoq/>
-        <Aloqa/>
-        <Footer/> 
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="product/:product_info" element={<ProductPage />} />
+        </Routes>
+        <Footer />
       </InnerWidthContext.Provider>
     </div>
   );

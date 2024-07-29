@@ -98,7 +98,7 @@
     border-radius: 5px;
 }
 
-.cards .infoPart .buyurtma_btn{
+.cards .infoPart a .buyurtma_btn{
     color: #fff;
     background-color: var(--main-color);
     border: none;
@@ -161,7 +161,7 @@
     .cards .infoPart .txt_grp .name{
         font-size: 4.5vw;
     }
-    .cards .infoPart .buyurtma_btn{
+    .cards .infoPart a .buyurtma_btn{
         font-size: 5.5vw;
         padding:3.5vw 4vw ;
         border-radius: 3.5vw;

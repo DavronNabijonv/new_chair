@@ -1,4 +1,6 @@
 import m1 from "../images/chair1.jpg";
+import m2 from '../images/chair2.jpg';
+import m3 from '../images/chair3.webp';
 
 export const images_info = [
   {
@@ -177,6 +179,8 @@ export const products_slider =[
   [
     {
       img_url: m1,
+      img1:m2,
+      img2:m3,
       name:'AA-1012',
       narxi:'1 200 000',
       uzunlik: "53sm",
@@ -194,6 +198,8 @@ export const products_slider =[
     },
     {
       img_url: m1,
+      img1:m2,
+      img2:m3,
       name:'AA-1012',
       narxi:'1 200 000',
       uzunlik: "53sm",
@@ -211,6 +217,8 @@ export const products_slider =[
     },
     {
       img_url: m1,
+      img1:m2,
+      img2:m3,
       name:'AA-1012',
       narxi:'1 200 000',
       uzunlik: "53sm",
@@ -228,6 +236,8 @@ export const products_slider =[
     },
     {
       img_url: m1,
+      img1:m2,
+      img2:m3,
       name:'AA-1012',
       narxi:'1 200 000',
       uzunlik: "53sm",
@@ -245,6 +255,8 @@ export const products_slider =[
     },
     {
       img_url: m1,
+      img1:m2,
+      img2:m3,
       name:'AA-1012',
       narxi:'1 200 000',
       uzunlik: "53sm",
@@ -262,6 +274,8 @@ export const products_slider =[
     },
     {
       img_url: m1,
+      img1:m2,
+      img2:m3,
       name:'AA-1012',
       narxi:'1 200 000',
       uzunlik: "53sm",
@@ -279,6 +293,8 @@ export const products_slider =[
     },
     {
       img_url: m1,
+      img1:m2,
+      img2:m3,
       name:'AA-1012',
       narxi:'1 200 000',
       uzunlik: "53sm",
@@ -296,6 +312,8 @@ export const products_slider =[
     },
     {
       img_url: m1,
+      img1:m2,
+      img2:m3,
       name:'AA-1012',
       narxi:'1 200 000',
       uzunlik: "53sm",
@@ -313,6 +331,8 @@ export const products_slider =[
     },
     {
       img_url: m1,
+      img1:m2,
+      img2:m3,
       name:'AA-1012',
       narxi:'1 200 000',
       uzunlik: "53sm",
@@ -330,6 +350,8 @@ export const products_slider =[
     },
     {
       img_url: m1,
+      img1:m2,
+      img2:m3,
       name:'AA-1012',
       narxi:'1 200 000',
       uzunlik: "53sm",

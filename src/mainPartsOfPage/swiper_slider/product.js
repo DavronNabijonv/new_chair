@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./product.css";
 import { products_slider } from "../../db/showCase_slider";
@@ -24,17 +25,25 @@ export default function Product() {
       {products_slider.map((productGroup, index) => (
         <div
           key={index}
-          className={`groupOfProducts ${index === selectedGroupIndex ? 'selected' : 'hide'}`}
+          className={`groupOfProducts ${
+            index === selectedGroupIndex ? "selected" : "hide"
+          }`}
         >
           {productGroup.map((product) => (
             <div className="cards" key={product.name}>
-              <img src={product.img_url} className="products_img" alt="stul rasmlari" />
+              <img
+                src={product.img_url}
+                className="products_img"
+                alt="stul rasmlari"
+              />
               <div className="infoPart">
                 <div className="txt_grp">
                   <p className="name"> Mahsulot: {product.name}</p>
                   <mark className="narxi">Narxi: {product.narxi}</mark>
                 </div>
+                <Link to={`/product/:${product}`}>
                   <button className="buyurtma_btn">Buyurtma berish</button>
+                </Link>
               </div>
             </div>
           ))}
@@ -42,12 +51,14 @@ export default function Product() {
       ))}
       <div className="productGroup">
         {groupNumbers.map((number) => (
-          <p 
-          className=
-            {`slider_pagination 
-                  ${number - 1 === selectedGroupIndex ? 'active' : ''}`}
-            onClick={()=>{slider(number-1)}}
-            key={number} >
+          <p
+            className={`slider_pagination 
+                  ${number - 1 === selectedGroupIndex ? "active" : ""}`}
+            onClick={() => {
+              slider(number - 1);
+            }}
+            key={number}
+          >
             {number}
           </p>
         ))}
