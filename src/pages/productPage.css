@@ -12,3 +12,15 @@
     width: 1200px;
     margin: 0 auto;
 }
+
+@media(max-width:1210px){
+  .p_container{
+    width: 100%;
+  }
+}
+
+@media(max-width:725px){
+    .product_page{
+        background-image: none;
+    }
+}
