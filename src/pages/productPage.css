@@ -1,0 +1,14 @@
+.product_page{
+    background-image: url(https://t3.ftcdn.net/jpg/07/09/84/58/360_F_709845829_GiCgHbuFHlmT9JuEghMFv8Lo8TG6u3wG.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    width: calc(100%  - 20px);
+    border-radius: 16px;
+    margin: 20px 10px;
+}
+
+.p_container{
+    width: 1200px;
+    margin: 0 auto;
+}

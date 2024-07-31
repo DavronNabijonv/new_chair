@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import { Link } from "react-router-dom";
 
 import "./product.css";
 import { products_slider } from "../../db/showCase_slider";
+import { ProductInfo } from "../../App";
 
 export default function Product() {
   const [groupNumbers, setGroupNumbers] = useState([]);
   const [selectedGroupIndex, setSelectedGroupIndex] = useState(0);
+  const {setProduct} = useContext(ProductInfo)
 
   const slider = (groupIndex) => {
     setSelectedGroupIndex(groupIndex);
@@ -41,8 +43,8 @@ export default function Product() {
                   <p className="name"> Mahsulot: {product.name}</p>
                   <mark className="narxi">Narxi: {product.narxi}</mark>
                 </div>
-                <Link to={`/product/:${product}`}>
-                  <button className="buyurtma_btn">Buyurtma berish</button>
+                <Link to={`/product`}>
+                  <button className="buyurtma_btn" onClick={()=>{setProduct(product)}}>Buyurtma berish</button>
                 </Link>
               </div>
             </div>

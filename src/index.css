@@ -11,6 +11,7 @@ body {
 
 body{
   background-color: rgba(248, 253, 255, 0.889);
+  overflow: visible;
 }
 
 code {

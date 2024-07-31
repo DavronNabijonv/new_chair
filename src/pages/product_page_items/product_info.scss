@@ -1,0 +1,93 @@
+@import url(../../styles/style.css);
+
+// bu product_info componentini end dastlabki classi
+.p_info_page {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+// bu p_info_page ichidagi birinchi chap tarfadai qism
+.rasm {
+  background-color: #00000050;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  gap: 10px;
+  width: 500px;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .main_img {
+    width: 80%;
+    height: 310px;
+    object-fit: contain;
+  }
+  .img_btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    .p_slide_img {
+      width: 20%;
+    }
+  }
+}
+
+// bu p_info_page ichidagi birinchi o`ng tarfadai qism
+.p_infor {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #00000050;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  padding: 20px 25px;
+  width: 650px;
+}
+
+.f_img {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  .img_olchamlari{
+    width: 400px;
+    height: 300px;
+    object-fit: contain;
+  }
+  .olchamlar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    h3{
+        color: #fff;
+    }
+    .olchamlar_group{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: #fff;
+        .olchamlar_div{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            p{
+                color: #fff;
+            }
+        }
+    }
+  }
+}
+
+.p_more_info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    .m_txts{
+        color: #fff;
+        font-size: 18px;
+    }
+}
