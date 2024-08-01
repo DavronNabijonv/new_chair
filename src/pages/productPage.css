@@ -13,14 +13,23 @@
     margin: 0 auto;
 }
 
-@media(max-width:1210px){
+@media(max-width:1220px){
   .p_container{
     width: 100%;
   }
 }
 
-@media(max-width:725px){
+@media(max-width:580px){
     .product_page{
-        background-image: none;
+        background-position: bottom left
     }
+}
+
+@media(max-width:425px){
+  .product_page{
+    margin: 0 10px;
+  }
+  .productHome{
+    padding-top: 100px;
+  }
 }

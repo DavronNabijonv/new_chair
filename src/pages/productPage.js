@@ -5,13 +5,13 @@ import Product_bottom from "./product_page_items/product_bottom";
 
 export default function ProductPage() {
   return (
-    <>
+    <div className="productHome">
       <div className="product_page">
         <div className="p_container">
           <Product_info />
         </div>
       </div>
       <Product_bottom />
-    </>
+    </div>
   );
 }

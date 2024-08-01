@@ -39,3 +39,19 @@
         }
     }
 }
+
+@media(max-width:1210px){
+    .p_bottom{
+        width: 100%;
+        justify-content: center;
+        h2{
+            text-align: center;
+            width: 100%;
+        }
+        .b_group_txt{
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
