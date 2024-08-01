@@ -32,8 +32,8 @@ export default function PastkiSlider() {
         >
           {images_info.map((r) => (
             <SwiperSlide key={r.img_url}>
-              <img src={`${r.img_url}`} className="b_of_asosiy_img" alt="Slide Image"  style={{borderRadius:"25px"}}/>
               <p className="savdo">Yozgi savdo</p>
+              <img src={`${r.img_url}`} className="b_of_asosiy_img" alt="Slide Image"  style={{borderRadius:"25px"}}/>
             </SwiperSlide>
           ))}
         </Swiper>

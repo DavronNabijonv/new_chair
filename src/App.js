@@ -29,8 +29,8 @@ function App() {
         <ProductInfo.Provider value={{product,setProduct}}>
           <Navbar />
           <Routes>
-            <Route path="product" element={<HomePage />} />
-            <Route path="/" element={<ProductPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="product" element={<ProductPage />} />
           </Routes>
           <Footer />
         </ProductInfo.Provider>

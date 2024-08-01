@@ -5,7 +5,7 @@
 .asosiy_slider_img {
   width: 100%;
   margin: 5px auto;
-  height: 600px;
+  height: 400px;
   object-fit: contain;
   border-radius: 15px;
 }
@@ -66,11 +66,12 @@
 
 @media (max-width: 670px) {
   .mySwiper {
-    padding-top: 60px;
+    padding-top: 20px;
     .swiper-wrapper {
       display: flex;
-      gap: 15px;
-      .swiper-slide{}
+      gap: 10px;
+      .swiper-slide{
+      }
     }
     .swiper-pagination{
       display: none;
@@ -84,9 +85,11 @@
   }
   .asosiy_slider_img {
     width: 100%;
-    margin-left: -120px;
-    object-fit: initial;
-    height: auto;
+    object-fit: cover;
+    object-position: center top;
+    height: 50vw;
+    border-radius: 25px;
+    margin-left: -25px;
   }
 }
 
@@ -99,7 +102,6 @@
   }
 
   .asosiy_slider_img{
-    height: calc(auto - 100px);
-    margin-left: -65px;
+    margin-left: -25px;
   }
 }

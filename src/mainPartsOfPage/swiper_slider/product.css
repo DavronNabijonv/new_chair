@@ -4,6 +4,7 @@
 .groupOfProducts{
     width: 1200px;
     margin: 40px auto;
+    margin-top: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -148,7 +149,7 @@
     .cards .infoPart{
         gap:0.5vw;
         padding: 5vw 1.5vw;
-        padding-top: 7vw;
+        padding-top: 4vw;
     }
     .cards .infoPart .txt_grp {
         gap: 2.5vw;
