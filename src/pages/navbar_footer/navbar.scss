@@ -35,7 +35,7 @@
   justify-content: center;
   gap: 8px;
   color: var(--text_color);
-  p {
+  a {
     font-size: 18px;
     margin: 0 15px;
     padding: 8px;
@@ -44,7 +44,7 @@
     margin-top: 5px;
     width: calc(auto + 8px);
     hr {
-      width: 0;
+      width: 30%;
       height: 3px;
       background-color: var(--back_color);
       border: none;
@@ -52,7 +52,7 @@
       margin-top: 5px;
     }
   }
-  p:hover {
+  a:hover {
     cursor: pointer;
     hr {
       width: calc(100% + 8px);
@@ -65,22 +65,26 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  button {
-    border: none;
-    background-color: var(--back_color);
-    font-size: 20px;
-    color: var(--main-color);
-    padding: 7px 28px;
-    border-radius: 10px;
-    font-weight: 600;
-    border: none;
-    transition: 0.2s;
-    text-align: center;
-    border: var(--border_style);
-  }
-  button:hover {
-    background: none;
-    cursor: pointer;
+  a {
+    button {
+      border: none;
+      background-color: var(--back_color);
+      font-size: 20px;
+      color: var(--main-color);
+      padding: 7px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      border: none;
+      transition: 0.2s;
+      text-align: center;
+      border: var(--border_style);
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: var(--main-color);
+      border-color: var(--back_color);
+      color: var(--text_color);
+    }
   }
 }
 
@@ -139,7 +143,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    .mobile_toggle_btn{
+    .mobile_toggle_btn {
       border: none;
       background: rgba(0, 0, 0, 0.338);
       backdrop-filter: blur(4px);
@@ -152,31 +156,33 @@
       color: var(--text_color);
       align-items: center;
       justify-content: center;
-      svg{
+      svg {
         font-weight: 900;
       }
     }
-    .mobile_aloqa {
-      border: none;
-      background-color: var(--back_color);
-      font-size: 20px;
-      color: var(--main-color);
-      padding: 7px 28px;
-      border-radius: 10px;
-      font-weight: 600;
-      border: none;
-      transition: 0.2s;
-      text-align: center;
-      border: var(--border_style);
-    }
-    .mobile_aloqa:hover {
-      background: none;
-      cursor: pointer;
+    a {
+      .mobile_aloqa {
+        border: none;
+        background-color: var(--back_color);
+        font-size: 20px;
+        color: var(--main-color);
+        padding: 7px 28px;
+        border-radius: 10px;
+        font-weight: 600;
+        border: none;
+        transition: 0.2s;
+        text-align: center;
+        border: var(--border_style);
+      }
+      .mobile_aloqa:hover {
+        background: none;
+        cursor: pointer;
+      }
     }
   }
 }
 
-.bottom_bar{
+.bottom_bar {
   position: fixed;
   z-index: 998;
   bottom: 0;
@@ -189,46 +195,48 @@
   padding: 10px;
   background-color: var(--back_color);
   box-shadow: var(--box-sh);
-  .bar_grp{
+  .bar_grp {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 5px;
-    svg{
+    svg {
       font-size: 25px;
       color: var(--main-color);
     }
-    p{
+    p {
       color: var(--main-color);
     }
   }
-  .bar_grp:nth-child(2){
-    svg{font-size: 30px;}
+  .bar_grp:nth-child(2) {
+    svg {
+      font-size: 30px;
+    }
     gap: 1px;
   }
 }
 
-@keyframes open_items{
-  from{
+@keyframes open_items {
+  from {
     left: -25%;
   }
-  to{
+  to {
     left: 25%;
   }
 }
 
-@keyframes mobile_overlay{
-  from{
+@keyframes mobile_overlay {
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
 
-.item_links{
-  animation-duration: open_items .8s forwards;
+.item_links {
+  animation-duration: open_items 0.8s forwards;
   width: 50%;
   height: auto;
   position: absolute;
@@ -241,10 +249,10 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  transition: transform(-50%,-50%);
+  transition: transform(-50%, -50%);
   top: 25%;
   left: 25%;
-  p{
+  a {
     font-size: 18px;
     margin: 0 15px;
     padding: 8px;
@@ -257,12 +265,12 @@
   }
 }
 
-.close_item{
-  animation: close_items .8s forwards;
+.close_item {
+  animation: close_items 0.8s forwards;
   display: none;
 }
 
-.overlay{
+.overlay {
   position: absolute;
   width: 100%;
   height: calc(100% + 100px);
@@ -271,10 +279,10 @@
   background-color: #ffffffa4;
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
-  animation: mobile_overlay .5s forwards;
+  animation: mobile_overlay 0.5s forwards;
 }
-.close_overlay{
-  animation: close_overlay .5s forwards;
+.close_overlay {
+  animation: close_overlay 0.5s forwards;
   display: none;
 }
 
@@ -313,7 +321,7 @@
         position: absolute;
         opacity: 0;
         width: 120px;
-        background-color:var(--main-color);
+        background-color: var(--main-color);
         border-radius: 8px;
         padding: 5px;
         left: 28px;
@@ -321,35 +329,31 @@
         color: var(--text_color);
         text-align: center;
       }
-      .asosiy {
+      .s_asosiy {
         top: -5px;
       }
-      .biz {
+      .s_biz {
         top: 40px;
       }
-      .mah {
+      .s_mah {
         top: 80px;
       }
-      .xizmat {
+      .s_xizmat {
         top: 120px;
       }
-      .aloqa {
+      .s_aloqa {
         top: 160px;
       }
     }
     li:hover {
       p {
         opacity: 1;
-        width: 120px;
       }
     }
   }
 }
 
 // scroll
-
-
-
 
 //  bu yerdan responsive qismlar boshlanadi
 
@@ -361,17 +365,16 @@
   }
 }
 
-
 @media (max-width: 860px) {
-  .navbar{
-    padding: 5px ;
+  .navbar {
+    padding: 5px;
     margin: 0 5px;
     margin-top: 5px;
-    .nav{
+    .nav {
       gap: 1vw;
-      .links{
+      .links {
         gap: 3px;
-        p{
+        p {
           margin: 0;
           padding: 3px;
           margin-top: 10px;
@@ -379,37 +382,35 @@
       }
     }
   }
-  
 }
 
-@media(max-width:670px){
-  .scroll{
+@media (max-width: 670px) {
+  .scroll {
     display: none;
   }
-  .bottom_bar{
+  .bottom_bar {
     display: flex;
   }
 }
 
-
-@media(max-width:425px){
-    .mobile{
-      padding: 10px 8px;
-      position: fixed;
-      z-index: 998;
-      width: 100%;
-      .btn_grp{
-        .mobile_toggle_btn{
-          font-size: 7vw;
-          padding: 1vw;
-        }
-        .mobile_aloqa{
-          font-size: 7vw;
-          padding: 1vw 7vw;
-        }
+@media (max-width: 425px) {
+  .mobile {
+    padding: 10px 8px;
+    position: fixed;
+    z-index: 998;
+    width: 100%;
+    .btn_grp {
+      .mobile_toggle_btn {
+        font-size: 7vw;
+        padding: 1vw;
+      }
+      .mobile_aloqa {
+        font-size: 7vw;
+        padding: 1vw 7vw;
       }
     }
-    .logo{
-      font-size: 7vw;
-    }
+  }
+  .logo {
+    font-size: 7vw;
+  }
 }

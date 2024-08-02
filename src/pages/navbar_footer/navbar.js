@@ -1,5 +1,6 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import "./navbar.scss";
+import {Link} from 'react-scroll';
 import { MdHome } from "react-icons/md";
 import { RiUser3Fill } from "react-icons/ri";
 import { HiMiniRectangleGroup, HiViewColumns } from "react-icons/hi2";
@@ -50,13 +51,42 @@ function Desktop() {
         <div className="logo">Seren Mebel</div>
 
         <div className="links">
-          <p> Biz haqimizda <hr /> </p>
-          <p> Mahsulotlar <hr /> </p>
-          <p> Xizmatlar <hr /> </p>
+          <Link activeClass="active" 
+            to="haqida" 
+            spy={true} 
+            smooth={true} 
+            offset={-50} 
+            duration={800} 
+          > Biz haqimizda <hr /> </Link>
+          <Link
+            activeClass="active" 
+            to="mahsulot" 
+            spy={true} 
+            smooth={true} 
+            offset={-50} 
+            duration={800} 
+          > Mahsulotlar <hr /> </Link>
+          <Link
+            activeClass="active" 
+            to="k_xizmat" 
+            spy={true} 
+            smooth={true} 
+            offset={-50} 
+            duration={800} 
+          > Xizmatlar <hr /> </Link>
         </div>
 
         <div className="language_login">
-          <button className="  btn-3">Aloqa</button>
+          <Link 
+            activeClass="active" 
+            to="k_aloqa" 
+            spy={true} 
+            smooth={true} 
+            offset={-50} 
+            duration={800} 
+          >
+            <button className="  btn-3">Aloqa</button>
+          </Link>
         </div>
 
       </div>
@@ -74,7 +104,17 @@ function Mobile (){
 
         <div className="btn_grp">
           <button className="mobile_toggle_btn" onClick={()=>{setToggle(!toggle)}}><HiOutlineMenuAlt1 /></button>
-          <button className="mobile_aloqa">Aloqa</button>
+          <Link 
+            activeClass="active" 
+            to="k_aloqa" 
+            spy={true} 
+            smooth={true} 
+            offset={-50} 
+            duration={800} 
+          >
+            <button className="mobile_aloqa">Aloqa</button>
+          </Link>
+          
         </div>
 
       </div>
@@ -82,9 +122,29 @@ function Mobile (){
       
 
           <div className={toggle?"item_links":"close_item"}>
-            <p> Biz haqimizda  </p>
-            <p> Mahsulotlar </p>
-            <p> Xizmatlar </p>
+          <Link activeClass="active" 
+            to="haqida" 
+            spy={true} 
+            smooth={true} 
+            offset={-50} 
+            duration={800} 
+          > Biz haqimizda </Link>
+          <Link
+            activeClass="active" 
+            to="mahsulot" 
+            spy={true} 
+            smooth={true} 
+            offset={-50} 
+            duration={800} 
+          > Mahsulotlar </Link>
+          <Link
+            activeClass="active" 
+            to="k_xizmat" 
+            spy={true} 
+            smooth={true} 
+            offset={-50} 
+            duration={800} 
+          > Xizmatlar </Link>
           </div>
 
          <div className={toggle?"overlay":"close_overlay"} onClick={()=>{setToggle(false)}}></div>
@@ -114,19 +174,19 @@ function ScrollNav() {
       {/* <div className="scroll_logo">Seren Mebel</div> */}
       <ol>
         <li>
-          <MdHome /> <p className="asosiy">Asosiy sahifa</p>
+          <MdHome /> <p className="s_asosiy">Asosiy sahifa</p>
         </li>
         <li>
-          <RiUser3Fill /> <p className="biz">Biz haqimizda</p>
+          <RiUser3Fill /> <p className="s_biz">Biz haqimizda</p>
         </li>
         <li>
-          <HiViewColumns /> <p className="mah">Mahsulotlar</p>
+          <HiViewColumns /> <p className="s_mah">Mahsulotlar</p>
         </li>
         <li>
-          <HiMiniRectangleGroup /> <p className="xizmat">Xizmatlar</p>
+          <HiMiniRectangleGroup /> <p className="s_xizmat">Xizmatlar</p>
         </li>
         <li>
-          <MdOutlineMessage /> <p className="aloqa"> Aloqa </p>
+          <MdOutlineMessage /> <p className="s_aloqa"> Aloqa </p>
         </li>
       </ol>
     </div>
