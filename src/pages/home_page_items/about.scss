@@ -5,14 +5,15 @@
   align-items: center;
   gap: 15px;
   width: 1200px;
-  margin: 50px auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
   h1 {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .a_group {
     display: flex;
-    gap: 20px;
-    margin-bottom: 50px;
+    gap: 30px;
+    margin-bottom: 30px;
     .a_img {
       width: 590px;
       height: 300px;
@@ -32,7 +33,7 @@
   .about {
     width: 100%;
     .a_group {
-      padding: 10px 20px;
+      padding: 0 20px;
       .a_img {
         width: 48%;
         height: auto;
@@ -48,7 +49,7 @@
   .about {
     .a_group {
       flex-direction: column;
-      gap: 40px;
+      gap: 30px;
       .a_img {
         width: 100%;
       }

@@ -21,14 +21,16 @@
 
 @media(max-width:580px){
     .product_page{
-        background-position: bottom left
+        background-position: bottom left;
+        margin: 0;
+        width: 100%;
+    }
+    .productHome{
+      padding-top: 28px;
     }
 }
 
 @media(max-width:425px){
-  .product_page{
-    margin: 0 10px;
-  }
   .productHome{
     padding-top: 100px;
   }

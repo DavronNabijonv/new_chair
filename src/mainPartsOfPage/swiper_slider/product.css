@@ -51,8 +51,8 @@
     box-shadow:  var(--box-sh);
     cursor: pointer;
     border-radius: 8px;
-    margin: 20px 0 ;
-    margin-bottom: 150px;
+    margin: 35px 0 ;
+    margin-bottom: 50px;
 }
 
 .active{
@@ -149,7 +149,7 @@
     .cards .infoPart{
         gap:0.5vw;
         padding: 5vw 1.5vw;
-        padding-top: 4vw;
+        padding-top: 20px;
     }
     .cards .infoPart .txt_grp {
         gap: 2.5vw;
