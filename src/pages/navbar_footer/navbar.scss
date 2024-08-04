@@ -47,6 +47,8 @@
     font-weight: 600;
     margin-top: 5px;
     width: calc(auto + 8px);
+    text-decoration: none;
+    background: none;
     hr {
       width: 30%;
       height: 3px;
@@ -70,6 +72,8 @@
   justify-content: center;
   gap: 15px;
   a {
+    text-decoration: none;
+    background: none;
     button {
       border: none;
       background-color: var(--back_color);
@@ -165,6 +169,8 @@
       }
     }
     a {
+      text-decoration: none;
+      background: none;
       .mobile_aloqa {
         border: none;
         background-color: var(--back_color);
@@ -200,6 +206,8 @@
   background-color: var(--back_color);
   box-shadow: var(--box-sh);
   a {
+    text-decoration: none;
+    background: none;
     .bar_grp {
       display: flex;
       flex-direction: column;
@@ -268,6 +276,7 @@
     width: calc(auto + 8px);
     background-color: rgb(238, 2, 255);
     border-radius: 10px;
+    text-decoration: none;
   }
 }
 
@@ -424,6 +433,8 @@
   }
   .logo {
     a {
+      text-decoration: none;
+      background: none;
       font-size: 7vw;
     }
   }
