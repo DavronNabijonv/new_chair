@@ -47,3 +47,13 @@
 .right_ani{
     animation: from_right 1.5s forwards;
 }
+
+@media(max-width:1210px){
+    .left_ani{
+        animation: pop-up 1.5s forwards;  
+    }
+    
+    .right_ani{
+        animation: pop-up 1.5s forwards;  
+    }
+}
