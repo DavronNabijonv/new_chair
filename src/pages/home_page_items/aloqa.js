@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "./aloqa.scss";
+import '../../styles/style.css'
 import { FaArrowRightLong, FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import {
+  Left_ani,
+  Right_ani,
+} from "../../mainPartsOfPage/animations/left_right";
 
 export default function Aloqa() {
   const [tel, setTel] = useState();
@@ -55,7 +60,7 @@ export default function Aloqa() {
       <div className="a_grp1">
         <h2>Biz bilan aloqa</h2>
         <div className="change_info">
-          <div className="get_input">
+          <Left_ani ownClassName={"get_input"}>
             <label>Telefon nomer:*</label>
             <input
               type="text"
@@ -74,8 +79,8 @@ export default function Aloqa() {
               Xabarni jo`natish
               <FaArrowRightLong />
             </button>
-          </div>
-          <div className="our_contact_info">
+          </Left_ani>
+          <Right_ani ownClassName={"our_contact_info"}>
             <p className="a_txt">
               <FaPhoneAlt /> +998 91 214 34 72
             </p>
@@ -90,18 +95,18 @@ export default function Aloqa() {
               Toshkent shahar Yashnabod tumani Olmos mahallasi Yakkatol 3-tor
               ko`chasi 38 uy
             </p>
-          </div>
+          </Right_ani>
         </div>
       </div>
       <div className="a_grp2">
-      <iframe
-            width="100%"
-            height="450"
-            frameborder="0"
-            src="https://www.google.com/maps/embed/v1/place?q=Manzilga+Toshkent+shahar+Yashnabod+tumani+Olmos+mahallasi+Yakkatol+3-tor+ko%E2%80%99chasi+38+uy&key=AIzaSyA-YgNEw2WDvbRixmD8lpNdwHo3qb-k-m0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
+        <iframe
+          width="100%"
+          height="450"
+          frameborder="0"
+          src="https://www.google.com/maps/embed/v1/place?q=Manzilga+Toshkent+shahar+Yashnabod+tumani+Olmos+mahallasi+Yakkatol+3-tor+ko%E2%80%99chasi+38+uy&key=AIzaSyA-YgNEw2WDvbRixmD8lpNdwHo3qb-k-m0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
       </div>
     </div>
   );

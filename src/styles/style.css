@@ -6,3 +6,44 @@
     --border_style:3.5px solid #7000ff;
     --border_r:10px;
 }
+
+@keyframes pop-up{
+    from{
+        opacity: 0;
+        scale: 0.7;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes from_left {
+    from{
+        margin-left: -2000px;
+    }
+    to{
+        margin-left: 0;
+    }
+}
+
+@keyframes from_right {
+    from{
+        margin-right: -2000px;
+    }
+    to{
+        margin-right: 0;
+    }
+}
+
+.pop_up{
+    animation: pop-up 1.5s forwards;    
+}
+
+.left_ani{
+    animation: from_left 1.5s forwards;
+}
+
+.right_ani{
+    animation: from_right 1.5s forwards;
+}

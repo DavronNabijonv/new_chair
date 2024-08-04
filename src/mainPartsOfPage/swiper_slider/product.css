@@ -10,6 +10,8 @@
     align-items: center;
     justify-content: space-around;
     gap: 15px;
+    position: relative;
+    overflow: hidden;
 }
 
 .hide{

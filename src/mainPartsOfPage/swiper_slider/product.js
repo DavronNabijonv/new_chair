@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./product.css";
 import { products_slider } from "../../db/showCase_slider";
 import { ProductInfo } from "../../App";
+import PopUp from "../animations/popUp";
 
 export default function Product() {
   const [groupNumbers, setGroupNumbers] = useState([]);
@@ -32,7 +33,7 @@ export default function Product() {
           }`}
         >
           {productGroup.map((product) => (
-            <div className="cards" key={product.name}>
+            <PopUp keyName={product.name} ownClassName={'cards'}>
               <img
                 src={product.img_url}
                 className="products_img"
@@ -47,7 +48,10 @@ export default function Product() {
                   <button className="buyurtma_btn" onClick={()=>{setProduct(product)}}>Buyurtma berish</button>
                 </Link>
               </div>
-            </div>
+            </PopUp>
+            // <div className={`animated-div cards `} key={product.name} >
+              
+            // </div>
           ))}
         </div>
       ))}

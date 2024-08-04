@@ -23,10 +23,14 @@
 }
 
 .logo {
-  color: var(--text_color);
-  font-size: 30px;
-  font-weight: 700;
-  font-family: "Bitter", sans;
+  a {
+    text-decoration: none;
+    background: none;
+    color: var(--text_color);
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Bitter", sans;
+  }
 }
 
 .links {
@@ -195,25 +199,27 @@
   padding: 10px;
   background-color: var(--back_color);
   box-shadow: var(--box-sh);
-  .bar_grp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    svg {
-      font-size: 25px;
-      color: var(--main-color);
+  a {
+    .bar_grp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      svg {
+        font-size: 25px;
+        color: var(--main-color);
+      }
+      p {
+        color: var(--main-color);
+      }
     }
-    p {
-      color: var(--main-color);
+    .bar_grp:nth-child(2) {
+      svg {
+        font-size: 30px;
+      }
+      gap: 1px;
     }
-  }
-  .bar_grp:nth-child(2) {
-    svg {
-      font-size: 30px;
-    }
-    gap: 1px;
   }
 }
 
@@ -313,41 +319,47 @@
     gap: 15px;
     position: relative;
     li {
-      svg {
-        color: var(--main-color);
-        font-size: 23px;
-      }
-      p {
-        position: absolute;
-        opacity: 0;
-        width: 120px;
-        background-color: var(--main-color);
-        border-radius: 8px;
-        padding: 5px;
-        left: 28px;
-        top: -8px;
-        color: var(--text_color);
-        text-align: center;
-      }
-      .s_asosiy {
-        top: -5px;
-      }
-      .s_biz {
-        top: 40px;
-      }
-      .s_mah {
-        top: 80px;
-      }
-      .s_xizmat {
-        top: 120px;
-      }
-      .s_aloqa {
-        top: 160px;
+      a{
+        text-decoration: none;
+        background: none;
+        svg {
+          color: var(--main-color);
+          font-size: 23px;
+        }
+        p {
+          position: absolute;
+          opacity: 0;
+          width: 120px;
+          background-color: var(--main-color);
+          border-radius: 8px;
+          padding: 5px;
+          left: 28px;
+          top: -8px;
+          color: var(--text_color);
+          text-align: center;
+        }
+        .s_asosiy {
+          top: -5px;
+        }
+        .s_biz {
+          top: 40px;
+        }
+        .s_mah {
+          top: 80px;
+        }
+        .s_xizmat {
+          top: 120px;
+        }
+        .s_aloqa {
+          top: 160px;
+        }
       }
     }
     li:hover {
-      p {
-        opacity: 1;
+      a{
+        p {
+          opacity: 1;
+        }
       }
     }
   }
@@ -411,6 +423,8 @@
     }
   }
   .logo {
-    font-size: 7vw;
+    a {
+      font-size: 7vw;
+    }
   }
 }

@@ -1,4 +1,5 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 import {Link} from 'react-scroll';
 import { MdHome } from "react-icons/md";
@@ -48,7 +49,7 @@ function Desktop() {
 
       <div className="nav">
 
-        <div className="logo">Seren Mebel</div>
+        <div className="logo"><NavLink to={'/'}>Seren Mebel</NavLink></div>
 
         <div className="links">
           <Link activeClass="active" 
@@ -100,7 +101,7 @@ function Mobile (){
     <>
       <div className="mobile">
 
-        <div className="logo">Seren Mebel</div>
+        <div className="logo"><NavLink to={'/'}>Seren Mebel</NavLink></div>
 
         <div className="btn_grp">
           <button className="mobile_toggle_btn" onClick={()=>{setToggle(!toggle)}}><HiOutlineMenuAlt1 /></button>
@@ -111,6 +112,7 @@ function Mobile (){
             smooth={true} 
             offset={-50} 
             duration={800} 
+            onClick={()=>{setToggle(false)}}
           >
             <button className="mobile_aloqa">Aloqa</button>
           </Link>
@@ -128,6 +130,7 @@ function Mobile (){
             smooth={true} 
             offset={-50} 
             duration={800} 
+            onClick={()=>{setToggle(false)}}
           > Biz haqimizda </Link>
           <Link
             activeClass="active" 
@@ -136,6 +139,7 @@ function Mobile (){
             smooth={true} 
             offset={-50} 
             duration={800} 
+            onClick={()=>{setToggle(false)}}
           > Mahsulotlar </Link>
           <Link
             activeClass="active" 
@@ -144,24 +148,43 @@ function Mobile (){
             smooth={true} 
             offset={-50} 
             duration={800} 
+            onClick={()=>{setToggle(false)}}
           > Xizmatlar </Link>
           </div>
 
          <div className={toggle?"overlay":"close_overlay"} onClick={()=>{setToggle(false)}}></div>
         
       <div className="bottom_bar">
+      <NavLink to={'/'}  >
         <div className="bar_grp">
           <SlHome />
           <p>Asosiy</p>
         </div>
-        <div className="bar_grp">
-        <MdOutlineManageSearch />
-          <p>Katalog</p>
-        </div>
-        <div className="bar_grp">
-        <MdOutlineStorefront />
-          <p>Shourum</p>
-        </div>
+      </NavLink>
+      <Link
+        activeClass="active" 
+        to="mahsulot" 
+        spy={true} 
+        smooth={true} 
+        offset={-50} 
+        duration={800} >
+          <div className="bar_grp">
+          <MdOutlineManageSearch />
+           <p>Katalog</p>
+          </div>
+        </Link>
+        <Link
+        activeClass="active" 
+        to="k_aloqa" 
+        spy={true} 
+        smooth={true} 
+        offset={-50} 
+        duration={800} >
+          <div className="bar_grp">
+            <MdOutlineStorefront />
+              <p>Shourum</p>
+          </div>
+        </Link>
       </div>
     </>
   )
@@ -174,19 +197,54 @@ function ScrollNav() {
       {/* <div className="scroll_logo">Seren Mebel</div> */}
       <ol>
         <li>
-          <MdHome /> <p className="s_asosiy">Asosiy sahifa</p>
+          <NavLink to={'/'}>
+            <MdHome /> <p className="s_asosiy">Asosiy sahifa</p>
+          </NavLink>
         </li>
         <li>
-          <RiUser3Fill /> <p className="s_biz">Biz haqimizda</p>
+        <Link 
+            to="haqida" 
+            spy={true} 
+            smooth={true} 
+            offset={-50} 
+            duration={800} 
+          > 
+              <RiUser3Fill /> <p className="s_biz">Biz haqimizda</p>
+           </Link>
+          
         </li>
         <li>
-          <HiViewColumns /> <p className="s_mah">Mahsulotlar</p>
+        <Link
+            to="mahsulot" 
+            spy={true} 
+            smooth={true} 
+            offset={-50} 
+            duration={800} 
+          > 
+            <HiViewColumns /> <p className="s_mah">Mahsulotlar</p>
+          </Link>
         </li>
         <li>
-          <HiMiniRectangleGroup /> <p className="s_xizmat">Xizmatlar</p>
+        <Link
+            to="k_xizmat" 
+            spy={true} 
+            smooth={true} 
+            offset={-50} 
+            duration={800} 
+          > 
+            <HiMiniRectangleGroup /> <p className="s_xizmat">Xizmatlar</p>
+          </Link>
         </li>
         <li>
-          <MdOutlineMessage /> <p className="s_aloqa"> Aloqa </p>
+        <Link 
+            to="k_aloqa" 
+            spy={true} 
+            smooth={true} 
+            offset={-50} 
+            duration={800} 
+          >
+            <MdOutlineMessage /> <p className="s_aloqa"> Aloqa </p>
+          </Link>
         </li>
       </ol>
     </div>
