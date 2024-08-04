@@ -138,7 +138,8 @@
     gap: 20px;
   }
   .rasm{
-    width: 95%;
+    width: 100%;
+    padding: 10px 0;
     .main_img{
       width: 100%;
       height: auto;
@@ -153,13 +154,19 @@
   .p_infor{
     flex-wrap: wrap;
     justify-content: start;
-    width: 95%;
+    width: 100%;
+    padding: 10px 0;
     gap: 20px;
   }
   .f_img{
     .img_olchamlari{
       width: 100%;
-
     }
+    .olchamlar{
+      padding:  0 10px;
+    }
+  }
+  .p_more_info{
+    padding: 0 10px;
   }
 }

@@ -167,4 +167,9 @@
         padding:3.5vw 4vw ;
         border-radius: 3.5vw;
     }
+
+    .productGroup .slider_pagination{
+        margin-top: 0;
+        margin-bottom: 35px;
+    }
 }

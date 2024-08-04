@@ -15,7 +15,7 @@
         border-radius: 25px;
         width: 100%;
         height: 100px;
-        margin: 5px auto;
+        margin: 0 auto;
         object-fit: contain;
         border-radius: 15px;
       }
@@ -47,9 +47,11 @@
 
 @media(max-width:375px){
   .mySwiperPastki {
+    margin: 10px 0;
     .swiper-wrapper {
       gap: 15px;
       .swiper-slide {
+        gap: 3px;
         .b_of_asosiy_img {
           border-radius: 8px;
         }
