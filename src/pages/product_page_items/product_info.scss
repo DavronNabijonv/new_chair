@@ -161,6 +161,8 @@
   .f_img{
     .img_olchamlari{
       width: 100%;
+      height: 400px;
+      object-fit: fill;
     }
     .olchamlar{
       padding:  0 10px;
