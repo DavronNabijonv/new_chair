@@ -10,29 +10,25 @@ export const InnerWidthContext = React.createContext();
 export const ProductInfo = React.createContext();
 
 function App() {
-  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  const [mainInnerWidth, setMainInnerWidth] = useState(window.innerWidth);
   const [product, setProduct] = useState(products_slider[0][0]);
 
   const handleResize = useCallback(() => {
-    setInnerWidth(window.innerWidth);
-  }, [innerWidth]);
+    setMainInnerWidth(window.innerWidth);
+  }, [mainInnerWidth]);
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      handleResize();
-    });
+    window.addEventListener("resize", handleResize());
 
 
     return () => {
-      window.removeEventListener("resize", () => {
-        handleResize();
-      });
+      window.removeEventListener("resize",handleResize());
     };
-  }, [handleResize]);
+  }, []);
 
   return (
     <div className="App">
-      <InnerWidthContext.Provider value={innerWidth}>
+      <InnerWidthContext.Provider value={mainInnerWidth}>
         <ProductInfo.Provider value={{ product, setProduct }}>
           <Navbar />
           <Routes>

@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import React, { useContext} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -23,7 +23,7 @@ export default function AsosiySwiper() {
       <div className="asosiy">
         <Swiper
           spaceBetween={0}
-          centeredSlides={innerWidthAsosiySwiper>670?true:false}
+          centeredSlides={true}
           pagination={true}
           loop={true}
           autoplay={{
@@ -31,7 +31,7 @@ export default function AsosiySwiper() {
             disableOnInteraction: false,
           }}
           navigation={true}
-          slidesPerView={innerWidthAsosiySwiper>670?1:1.3}
+          slidesPerView={innerWidthAsosiySwiper>670?1:1.5}
           modules={[Pagination, Navigation, Autoplay]}
           className="mySwiper"
         >
