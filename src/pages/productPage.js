@@ -5,7 +5,11 @@ import Product_bottom from "./product_page_items/product_bottom";
 import SendInfo from "./product_page_items/sendInfo";
 
 export default function ProductPage() {
-  useEffect(()=>{window.scrollTo(0, 0);},[])
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="productHome">
       <div className="product_page">
