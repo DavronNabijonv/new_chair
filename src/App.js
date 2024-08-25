@@ -5,6 +5,7 @@ import HomePage from "./pages/homePage";
 import ProductPage from "./pages/productPage";
 import Footer from "./pages/navbar_footer/footer";
 import { products_slider } from "./db/showCase_slider";
+import Load from "./pages/loading_page/load";
 
 export const InnerWidthContext = React.createContext();
 export const ProductInfo = React.createContext();
@@ -28,7 +29,8 @@ function App() {
 
   return (
     <div className="App">
-      <InnerWidthContext.Provider value={mainInnerWidth}>
+      <Load/>
+      {/* <InnerWidthContext.Provider value={mainInnerWidth}>
         <ProductInfo.Provider value={{ product, setProduct }}>
           <Navbar />
           <Routes>
@@ -37,7 +39,7 @@ function App() {
           </Routes>
           <Footer />
         </ProductInfo.Provider>
-      </InnerWidthContext.Provider>
+      </InnerWidthContext.Provider> */}
     </div>
   );
 }
