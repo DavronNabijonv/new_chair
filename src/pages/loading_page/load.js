@@ -14,17 +14,17 @@ import m10 from '../../images/loading_images/img10.jpg'
 export default function Load() {
   const [isLoading, setIsLoading] = useState(true);
 
-  //   useEffect(() => {
-  //     // Simulate loading for 3 seconds
-  //     const loadingTimeout = setTimeout(() => {
-  //       setIsLoading(false);
-  //     }, 3000);
+    useEffect(() => {
+      // Simulate loading for 3 seconds
+      const loadingTimeout = setTimeout(() => {
+        setIsLoading(false);
+      }, 5000);
 
-  //     // Cleanup the timeout when the component unmounts
-  //     return () => {
-  //       clearTimeout(loadingTimeout);
-  //     };
-  //   }, []);
+      // Cleanup the timeout when the component unmounts
+      return () => {
+        clearTimeout(loadingTimeout);
+      };
+    }, []);
   return (
     <>
       {isLoading && (

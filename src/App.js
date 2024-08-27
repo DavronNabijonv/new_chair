@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <Load/>
-      {/* <InnerWidthContext.Provider value={mainInnerWidth}>
+      <InnerWidthContext.Provider value={mainInnerWidth}>
         <ProductInfo.Provider value={{ product, setProduct }}>
           <Navbar />
           <Routes>
@@ -39,7 +39,7 @@ function App() {
           </Routes>
           <Footer />
         </ProductInfo.Provider>
-      </InnerWidthContext.Provider> */}
+      </InnerWidthContext.Provider>
     </div>
   );
 }
